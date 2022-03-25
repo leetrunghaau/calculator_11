@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.21" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gOverTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <TextView
+        android:id="@+id/tview"
+        android:text="123456"
+        android:textSize="50dp"
+        android:background="#555555"
+        android:textColor="#ffffff"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/gOverTop"
+        app:layout_constraintBottom_toBottomOf="@id/gTop"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!-- hàng số  7 8 9 /   ________________________________-->
+    <Button
+        android:id="@+id/b7"
+        android:layout_width="0dp"
+
+        android:layout_height="0dp"
+        android:text="7"
+        app:layout_constraintTop_toTopOf="@id/gTop"
+        app:layout_constraintBottom_toTopOf="@id/b4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/b8"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintHorizontal_weight="1"
+        android:background="@color/#e5e5e5"
+        android:textColor="#000000"
+        />
+
+    <Button
+        android:id="@+id/b8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="8"
+        android:background="@color/#e5e5e5"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@id/b5"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/b7"
+        app:layout_constraintRight_toLeftOf="@id/b9"
+        app:layout_constraintTop_toTopOf="@id/gTop" />
+
+    <Button
+        android:id="@+id/b9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@id/b6"
+        android:background="@color/#e5e5e5"
+        android:textColor="#000000"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/b8"
+        app:layout_constraintRight_toLeftOf="@id/bDiv"
+        app:layout_constraintTop_toTopOf="@id/gTop"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <Button
+        android:id="@+id/bDiv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="/"
+        app:layout_constraintTop_toTopOf="@id/gTop"
+        app:layout_constraintBottom_toTopOf="@id/bMul"
+        app:layout_constraintLeft_toRightOf="@id/b9"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/#e5e5e5"
+        android:textColor="#000000"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintHorizontal_weight="1"
+        />
+    <!-- hàng số  4 5 6 x   ________________________________-->
+    <Button
+        android:id="@+id/b4"
+        android:layout_width="0dp"
+
+        android:layout_height="0dp"
+        android:text="4"
+        app:layout_constraintTop_toBottomOf="@id/b7"
+        android:background="@color/#e5e5e5"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@id/b1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/b5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        />
+
+    <Button
+        android:id="@+id/b5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="5"
+        android:background="@color/#e5e5e5"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@id/b2"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/b4"
+
+        app:layout_constraintRight_toLeftOf="@id/b6"
+        app:layout_constraintTop_toBottomOf="@id/b8" />
+
+    <Button
+        android:id="@+id/b6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="6"
+        android:background="@color/#e5e5e5"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@id/b3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/b5"
+        app:layout_constraintRight_toLeftOf="@id/bMul"
+        app:layout_constraintTop_toBottomOf="@id/b9"
+         />
+
+    <Button
+        android:id="@+id/bMul"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/#e5e5e5"
+        android:textColor="#000000"
+        android:text="x"
+        app:layout_constraintTop_toBottomOf="@id/bDiv"
+        app:layout_constraintBottom_toTopOf="@id/bSub"
+        app:layout_constraintLeft_toRightOf="@id/b6"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        />
+    <!-- hàng số  1 2 3 -   ________________________________-->
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="0dp"
+        android:backgroundTint="#e5e5e5"
+
+        android:textColor="#000000"
+        android:layout_height="0dp"
+        android:text="1"
+        app:layout_constraintTop_toBottomOf="@id/b4"
+        app:layout_constraintBottom_toTopOf="@id/b0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/b2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="2"
+        android:background="@color/material_dynamic_neutral20"
+        app:layout_constraintBottom_toTopOf="@id/b0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/b1"
+        app:layout_constraintRight_toLeftOf="@id/b3"
+        app:layout_constraintTop_toBottomOf="@id/b5"
+        app:layout_constraintVertical_weight="1"
+        android:backgroundTint="#e5e5e5"
+        />
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="3"
+
+
+        app:layout_constraintBottom_toTopOf="@id/bDot"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/b2"
+        app:layout_constraintRight_toLeftOf="@id/bSub"
+        app:layout_constraintTop_toBottomOf="@id/b6"
+        app:layout_constraintVertical_bias="0.499"
+        android:background="@drawable/button"/>
+
+    <Button
+        android:id="@+id/bSub"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-"
+        app:layout_constraintTop_toBottomOf="@id/bMul"
+        app:layout_constraintBottom_toTopOf="@id/bPlus"
+        android:background="@color/material_dynamic_neutral20"
+        app:layout_constraintLeft_toRightOf="@id/b3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        />
+    <!-- hàng số  0 . +   ________________________________-->
+    <Button
+        android:id="@+id/b0"
+        android:layout_width="0dp"
+
+        android:layout_height="0dp"
+        android:text="0"
+        android:background="@color/material_dynamic_neutral20"
+        app:layout_constraintTop_toBottomOf="@id/b1"
+        app:layout_constraintBottom_toBottomOf="@id/bClear"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bDot"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintVertical_weight="1"
+        />
+
+    <Button
+        android:id="@+id/bDot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/material_dynamic_neutral20"
+        android:text="."
+        app:layout_constraintBottom_toTopOf="@id/bEqual"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/b0"
+        app:layout_constraintRight_toLeftOf="@id/bPlus"
+        app:layout_constraintTop_toBottomOf="@id/b3" />
+
+
+
+    <Button
+        android:id="@+id/bPlus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/material_dynamic_neutral20"
+        android:text="+"
+        android:theme="@style/FlatButton"
+        app:layout_constraintTop_toBottomOf="@id/bSub"
+        app:layout_constraintBottom_toTopOf="@id/bEqual"
+        app:layout_constraintLeft_toRightOf="@id/bDot"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        />
+    <!-- hàng số  C =   ________________________________-->
+    <Button
+        android:id="@+id/bClear"
+        android:layout_width="0dp"
+
+        android:background="@color/#FF8700"
+
+        android:layout_height="0dp"
+        android:text="C"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:drawablePadding="10dp"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/gBottom"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bEqual"
+        app:layout_constraintTop_toBottomOf="@id/b0"
+        app:layout_constraintVertical_weight="1" />
+
+
+    <Button
+        android:id="@+id/bEqual"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="="
+        app:layout_constraintTop_toBottomOf="@id/bDot"
+        app:layout_constraintBottom_toBottomOf="@id/gBottom"
+        app:layout_constraintLeft_toRightOf="@id/bClear"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        android:background="@color/material_dynamic_neutral20"
+        app:layout_constraintVertical_weight="1"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
